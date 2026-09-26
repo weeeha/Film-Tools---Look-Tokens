@@ -1,6 +1,6 @@
 # Look Tokens: design
 
-Status: draft for Nick's review · 2026-09-26 · Repo: `weeeha/Film-Tools---Look-Tokens` · Build 02 on the "20 builds for Runway Labs" board
+Status: approved by Nick · 2026-09-26 · Repo: `weeeha/Film-Tools---Look-Tokens` · Build 02 on the "20 builds for Runway Labs" board
 
 Supersedes `Runaway/builds/09-look-tokens/spec.md` (2026-09-19), which placed this build inside Film Analyzer.
 
@@ -27,7 +27,7 @@ Numbered so any one can be overridden by number.
 5. **Stills only.** Runway `gen4_image` through the image-gen adapter.
 6. **Adapters come from film-tokens.md Tier 3.** Image-gen in phase 1, Seedance (text only) in phase 2.
 7. **Demo content is Scene 15, the restaurant.** Six interior shots, drafted from canon and tagged `[PROPOSED]` wherever no citation exists. Nick reviews them in this spec (section 4).
-8. **A new proposed look, `look/overgrown-interior`, carries the six shots.** The four looks in film-tokens.md cover exteriors and flashbacks only, which the Scene 15 spec already notes (Open list item 11). The v1 Scene 15 prompt carries its interior grade inline. film-tokens.md says a missing word becomes a new semantic token, so this build promotes that inline text to a token. See section 12, question 2.
+8. **A new proposed look, `look/overgrown-interior`, carries the six shots.** The four looks in film-tokens.md cover exteriors and flashbacks only, which the Scene 15 spec already notes (Open list item 11). The v1 Scene 15 prompt carries its interior grade inline. film-tokens.md says a missing word becomes a new semantic token, so this build promotes that inline text to a token. Accepted 2026-09-26.
 9. **Spoiler text never enters this repo.** The repo is public. The two SPOILER primitives appear as redacted rows with neutral ids, enough to exercise the rule and show a locked row in the UI.
 10. **One render key.** `renderKey = sha256(model | ratio | seed | prompt)` drives staleness, the browser render map, and the Blob pathname.
 
@@ -222,15 +222,15 @@ Unverified, all phase 2, checked before any paid call:
 
 Risks:
 
-- **Public repo.** The seed quotes canon from a film whose own repo is private. See section 12, question 1.
+- **Public repo.** The seed quotes Montreal canon (no spoilers) from a film whose own repo is private. Nick chose to keep this repo public (section 12).
 - **Blob store on a public link.** Renders are publicly readable by URL. Acceptable for stills of a demo scene; worth knowing.
 - **Stills of one scene can look alike.** If the mock wash is too subtle, the before/after beat reads weakly. The mock provider's colour mapping is tuned against the demo edit specifically.
 
-## 12. Open questions for Nick
+## 12. Review decisions (2026-09-26)
 
-1. **Repo visibility.** `weeeha/Film-Tools---Look-Tokens` is public, and this spec plus the seed quote Montreal canon (no spoilers). Options: (a) make the repo private and keep the Vercel preview unlisted, (b) keep it public and accept the canon being readable, (c) keep it public with a trimmed seed. Nothing has been pushed yet.
-2. **`look/overgrown-interior`.** Accept the new proposed token (decision 8), or put the six shots on `look/rain-reveal` as first approved in chat. If accepted, it should also be added to film-tokens.md 2b as `[PROPOSED]`, so the source file stays the single source of truth. That edit is outside this repo and is not made without a go.
-3. **The six shots.** Correct any action line, shot size, or ref in section 4.
+1. **Repo visibility: public.** The seed and this spec quote non-spoiler Montreal canon. Decision 9 still holds: no spoiler text or spoiler-revealing ids, ever.
+2. **`look/overgrown-interior`: accepted.** Still open: adding it to film-tokens.md 2b as `[PROPOSED]`, so the source file stays the single source of truth. That edit is in the My Films repo and waits for Nick's go.
+3. **The six shots: approved as written in section 4.**
 
 ## 13. Out of scope
 
