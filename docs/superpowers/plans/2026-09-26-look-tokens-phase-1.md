@@ -82,14 +82,24 @@ git checkout -b feat/phase-1
 
 - [ ] **Step 2: Scaffold into the repo**
 
+`create-next-app .` refuses a folder containing `README.md` or the git-ignored `.superpowers/` workspace, so scaffold into a subfolder and move the files up:
+
 ```bash
 git rm -q README.md
-npx -y create-next-app@latest . --ts --tailwind --eslint --app --import-alias "@/*" --use-pnpm --yes --disable-git
+npx -y create-next-app@latest scaffold-tmp --ts --tailwind --eslint --app --import-alias "@/*" --use-pnpm --yes --disable-git --skip-install
+for f in $(ls -A scaffold-tmp); do mv "scaffold-tmp/$f" .; done
+rmdir scaffold-tmp
+```
+
+In `package.json`, change `"name": "scaffold-tmp"` to `"name": "look-tokens"`. Then install:
+
+```bash
+pnpm install
 pnpm add zod @noble/hashes idb-keyval
 pnpm add -D vitest
 ```
 
-Expected: `Success! Created ...`, then `+ zod 4.x`, `+ @noble/hashes 2.x`, `+ idb-keyval 6.x`, `+ vitest 5.x`. `docs/` is left untouched.
+Expected: `Success! Created scaffold-tmp ...`, then `+ zod 4.x`, `+ @noble/hashes 2.x`, `+ idb-keyval 6.x`, `+ vitest 5.x`. `docs/` and `.superpowers/` are left untouched, and `git status` never lists `.superpowers/`.
 
 - [ ] **Step 3: Add Vitest config**
 
