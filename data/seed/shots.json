@@ -1,0 +1,74 @@
+[
+  {
+    "id": "s15-welcome",
+    "scene": 15,
+    "label": "The welcome",
+    "shotSize": "medium shot, eye level from the doorway",
+    "action": "The service robot turns to the doorway and welcomes a guest who stays out of frame.",
+    "actionCitations": ["[J27 29:41]", "[A01 08:16]"],
+    "era": "post",
+    "ratio": "16:9",
+    "refs": ["look/overgrown-interior", "bot/restaurant", "loc/restaurant"],
+    "proposedFields": ["shotSize", "ratio", "refs"]
+  },
+  {
+    "id": "s15-room",
+    "scene": 15,
+    "label": "The room",
+    "shotSize": "wide establishing shot",
+    "action": "The service robot works between set tables of dead diners.",
+    "actionCitations": ["[J27 30:25]"],
+    "era": "post",
+    "ratio": "16:9",
+    "refs": ["look/overgrown-interior", "loc/restaurant", "bot/restaurant"],
+    "proposedFields": ["shotSize", "ratio", "refs"]
+  },
+  {
+    "id": "s15-pour-wide",
+    "scene": 15,
+    "label": "The pour, wide",
+    "shotSize": "wide shot",
+    "action": "The service robot lifts the broken carafe from its tray and walks toward a seated dead diner.",
+    "actionCitations": ["[A01 09:13]"],
+    "era": "post",
+    "ratio": "16:9",
+    "refs": ["look/overgrown-interior", "bot/restaurant", "prop/carafe", "loc/restaurant"],
+    "proposedFields": ["ratio", "refs"]
+  },
+  {
+    "id": "s15-pour-medium",
+    "scene": 15,
+    "label": "The pour, medium",
+    "shotSize": "medium shot",
+    "action": "The robot leans over the diner's cup and tilts the carafe. Nothing comes out.",
+    "actionCitations": ["[J27 30:53]", "[A01 09:13]"],
+    "era": "post",
+    "ratio": "16:9",
+    "refs": ["look/overgrown-interior", "bot/restaurant", "prop/carafe", "loc/restaurant"],
+    "proposedFields": ["ratio", "refs"]
+  },
+  {
+    "id": "s15-pour-close",
+    "scene": 15,
+    "label": "The pour, close",
+    "shotSize": "close-up on the carafe's mouth above the empty cup",
+    "action": "The carafe tilts over an empty cup. Nothing comes out.",
+    "actionCitations": ["[J27 30:53]"],
+    "era": "post",
+    "ratio": "16:9",
+    "refs": ["look/overgrown-interior", "prop/carafe", "bot/restaurant"],
+    "proposedFields": ["ratio", "refs"]
+  },
+  {
+    "id": "s15-trip",
+    "scene": 15,
+    "label": "The trip",
+    "shotSize": "wide shot, low angle",
+    "action": "The service robot lies fallen beside a cable on the floor, trying to get up.",
+    "actionCitations": ["[A01 10:13]"],
+    "era": "post",
+    "ratio": "16:9",
+    "refs": ["look/overgrown-interior", "bot/restaurant", "prop/cable", "loc/restaurant"],
+    "proposedFields": ["shotSize", "ratio", "refs"]
+  }
+]
